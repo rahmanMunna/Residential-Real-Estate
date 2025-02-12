@@ -1,0 +1,35 @@
+.animated-border {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden; /* Ensures the pseudo-element stays within bounds */
+}
+
+.animated-border::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    z-index: -1;
+    border-radius: 14px;
+    border : 3px solid;
+    border-image-source: linear-gradient(45deg, 
+        #ff0000, #ff7300, #ffeb00, 
+        #47ff00, #00ffee, #0048ff, 
+        #7a00ff, #ff00ff, #ff0000);
+    background-size: 400% 400%;
+    animation: borderAnimation 5s linear infinite;
+}
+
+@keyframes borderAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

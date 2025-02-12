@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Luxury Family Villa",
+    "segment_name": "Single-family Home",
+    "description": "A beautiful 4-bedroom villa with a spacious garden and modern amenities. Perfect for families seeking comfort and elegance, this villa offers a peaceful environment with high-end finishes. Located in a prime area of Los Angeles, it’s designed for those who appreciate luxury living.",
+    "price": "750,000",
+    "status": "sale",
+    "area": "3500 sqft",
+    "location": "Los Angeles, CA",
+    "facilities": ["Living Room", "Swimming Pool", "Kitchen", "Garage", "Garden"],
+    "image": "https://i.ibb.co.com/4ZxLH65P/1.jpg"
+  },
+  {
+    "id": 2,
+    "estate_title": "Cozy Downtown Apartment",
+    "segment_name": "Apartment",
+    "description": "A stylish 2-bedroom apartment in the heart of the city with great views. This apartment is perfect for those who enjoy city life and need easy access to all the amenities that downtown offers. With modern features, it’s ideal for young professionals or couples.",
+    "price": "2,000/month",
+    "status": "rent",
+    "area": "1200 sqft",
+    "location": "New York, NY",
+    "facilities": ["Living Room", "Balcony", "Kitchen", "Gym Access"],
+    "image": "https://i.ibb.co.com/dJDjFMFD/2.jpg"
+  },
+  {
+    "id": 3,
+    "estate_title": "Modern Student Housing",
+    "segment_name": "Student Housing",
+    "description": "Affordable student housing with shared facilities and study areas. Designed with students in mind, this housing offers a comfortable and supportive environment for academic success. It includes common spaces where you can relax and study with fellow students.",
+    "price": "800/month",
+    "status": "rent",
+    "area": "500 sqft",
+    "location": "Boston, MA",
+    "facilities": ["Living Room", "Shared Kitchen", "Study Area", "Laundry Room"],
+    "image": "https://i.ibb.co.com/7xtV06KF/3.jpg"
+  },
+  {
+    "id": 4,
+    "estate_title": "Senior Living Community",
+    "segment_name": "Senior Living",
+    "description": "A peaceful and well-equipped senior living community with healthcare access. The community is designed to cater to the needs of seniors, with easy access to healthcare and recreational activities. It offers a comfortable and supportive environment for its residents.",
+    "price": "3,500/month",
+    "status": "rent",
+    "area": "900 sqft",
+    "location": "Miami, FL",
+    "facilities": ["Living Room", "Medical Assistance", "Recreational Area", "Garden"],
+    "image": "https://i.ibb.co.com/3myd54Jp/4.jpg"
+  },
+  {
+    "id": 5,
+    "estate_title": "Beachfront Vacation Home",
+    "segment_name": "Vacation Rental",
+    "description": "A stunning beachfront home perfect for holiday getaways. This home provides a luxurious retreat with panoramic views of the ocean. Ideal for families or groups looking to escape and relax by the beach, complete with modern amenities for comfort.",
+    "price": "500/night",
+    "status": "rent",
+    "area": "2500 sqft",
+    "location": "Malibu, CA",
+    "facilities": ["Living Room", "Private Beach", "Kitchen", "Jacuzzi", "Outdoor Deck"],
+    "image": "https://i.ibb.co.com/gFR8HbTh/5.jpg"
+  },
+  {
+    "id": 6,
+    "estate_title": "Urban Loft",
+    "segment_name": "Apartment",
+    "description": "A modern loft apartment with high ceilings and an open floor plan. Located in a vibrant neighborhood, this loft is perfect for those who appreciate modern design and spacious living. The rooftop terrace adds an extra touch for those who enjoy city views.",
+    "price": "3,000/month",
+    "status": "rent",
+    "area": "1500 sqft",
+    "location": "Chicago, IL",
+    "facilities": ["Living Room", "Gym Access", "Kitchen", "Rooftop Terrace"],
+    "image": "https://i.ibb.co.com/5x9GqCVQ/6.jpg"
+  },
+  {
+    "id": 7,
+    "estate_title": "Suburban Family Home",
+    "segment_name": "Single-family Home",
+    "description": "A comfortable suburban home with a large backyard and great schools nearby. This home offers a peaceful lifestyle with plenty of space for families. It’s a great choice for those looking for a quiet neighborhood with easy access to amenities.",
+    "price": "450,000",
+    "status": "sale",
+    "area": "2800 sqft",
+    "location": "Austin, TX",
+    "facilities": ["Living Room", "Garage", "Kitchen", "Backyard"],
+    "image": "https://i.ibb.co.com/VY1VKmTJ/7.jpg"
+  },
+  {
+    "id": 8,
+    "estate_title": "Mountain Cabin Retreat",
+    "segment_name": "Vacation Rental",
+    "description": "A cozy cabin in the mountains perfect for a quiet getaway. Escape to nature and enjoy the tranquility of the mountains in this charming cabin. With hiking trails nearby and a warm fireplace, it’s ideal for a peaceful retreat.",
+    "price": "250/night",
+    "status": "rent",
+    "area": "1800 sqft",
+    "location": "Aspen, CO",
+    "facilities": ["Living Room", "Fireplace", "Kitchen", "Hiking Trails"],
+    "image": "https://i.ibb.co.com/YBPkgs2X/8.jpg"
+  },
+  {
+    "id": 9,
+    "estate_title": "Downtown Condo",
+    "segment_name": "Condominium",
+    "description": "A sleek and modern condo in a high-rise building with city views. Located in the heart of the city, this condo offers the perfect combination of luxury and convenience. It’s an ideal living space for those who want to experience city life at its best.",
+    "price": "3,500/month",
+    "status": "rent",
+    "area": "1300 sqft",
+    "location": "San Francisco, CA",
+    "facilities": ["Living Room", "Gym Access", "Kitchen", "Concierge Service"],
+    "image": "https://i.ibb.co.com/DPcRg74z/9.jpg"
+  }
+]
