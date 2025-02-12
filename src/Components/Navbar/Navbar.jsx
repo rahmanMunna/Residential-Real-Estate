@@ -42,8 +42,11 @@ const Navbar = () => {
     console.log(user)
 
     const navLinks = <>
-        <li><NavLink  to='/'>Home</NavLink></li>
+        <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/userProfile'>User Profile</NavLink></li>
+        {
+            user && <li><NavLink to='/updateProfile'>Update Profile</NavLink></li>
+        }
 
     </>
 
@@ -76,13 +79,13 @@ const Navbar = () => {
                     <h1 class="text-3xl"><span className='text-5xl font-bold text-orange-700'>E</span>state</h1>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1 text-xl">
+                    <ul class="menu gap-3  menu-horizontal px-1 text-xl">
                         {navLinks}
                     </ul>
                 </div>
 
                 <div class="navbar-end gap-3">
-                    <h1 className='text-sm lg:text-xl'>{email}</h1>
+                    <h1 className='text-sm overflow-auto lg:text-xl'>{email}</h1>
                     <img title={name?.length ? name : 'Name is not Available'} className='w-[40px] h-[40px] rounded-full' src=
                         {
                             user && photo ? photo : userProfile

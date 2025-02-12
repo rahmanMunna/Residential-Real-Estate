@@ -7,6 +7,7 @@ import UserProfile from "../UserInformation/UserProfile/UserProfile";
 import ProtectedRoute from "./Protected Route/ProtectedRoute";
 import EstateDetails from "../Estate/Estate Detaiils/EstateDetails";
 import ErrorPage from "../Components/Error Page/ErrorPage";
+import UpdateProfile from "../UserInformation/Update Profile/UpdateProfile";
 
 const router = createBrowserRouter([
 
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path: '/userProfile',
                 element: <ProtectedRoute><UserProfile></UserProfile></ProtectedRoute>
+            },
+            {
+                path : '/updateProfile',
+                element : <ProtectedRoute><UpdateProfile></UpdateProfile></ProtectedRoute>
             },
             {
                 path: '/estateDetails/:id',
