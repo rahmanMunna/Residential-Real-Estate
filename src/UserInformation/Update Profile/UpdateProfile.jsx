@@ -73,13 +73,13 @@ const UpdateProfile = () => {
             <div className='lg:w-1/2 mx-auto text-white flex flex-col items-center border pt-4 border-green-500 '>
                 <div>
                     {
-                        photoURL ? <img className='text-7xl rounded-xl' src={photoURL} alt="" /> : <FaUser className='text-7xl '></FaUser>
+                        photoURL ? <img className='text-7xl w-44 h-50 rounded-xl shadow-lg shadow-red-800' src={photoURL} alt="" /> : <FaUser className='text-7xl '></FaUser>
                     }
                 </div>
                 <div className='w-full p-5'>
                     <div className='space-y-2'>
                         <h1 className='text-2xl'>Name :</h1>
-                        <input
+                        <input 
                             ref={nameRef}
 
                             type="text"

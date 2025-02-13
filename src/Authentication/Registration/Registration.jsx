@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Registration = () => {
 
-    const { createUser } = useContext(AuthContext)
+    const { createUser, updateUserProfile } = useContext(AuthContext)
 
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState('');
@@ -24,7 +24,7 @@ const Registration = () => {
     const notifySuccess = () => {
         toast.success('Registration Successful', {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: false,
             pauseOnHover: true,
@@ -33,9 +33,8 @@ const Registration = () => {
             theme: "dark",
             transition: Flip,
         });
+        setTimeout(1000);
     }
-
-
 
 
     const signUp = (email, password, name, photoUrl) => {
@@ -43,10 +42,34 @@ const Registration = () => {
             .then(result => {
                 setError('')
                 setSuccess(true)
-                result.user.displayName = name;
-                result.user.photoURL = photoUrl;
+
+                updateUserProfile(name, photoUrl, '')
+                    .then(() => {
+                        notifySuccess();
+                        {
+                            <ToastContainer
+                                position="top-right"
+                                autoClose={5000}
+                                hideProgressBar={false}
+                                newestOnTop={false}
+                                closeOnClick={false}
+                                rtl={false}
+                                pauseOnFocusLoss
+                                draggable
+                                pauseOnHover
+                                theme="light"
+                                transition={Flip}
+                            />
+                        }
+                        navigate('/')
+
+                    })
+                    .catch(error => {
+                        console.log(error.message)
+                    })
+
                 console.log(result.user)
-                navigate('/')
+
 
 
             })
@@ -162,25 +185,7 @@ const Registration = () => {
                     </div>
                     <div className='text-lg text-red-500'>
                         {
-                            error.length > 0 ? <h1>{error}</h1> :
-                                <div>
-                                    {notifySuccess()}
-                                    <ToastContainer
-                                        position="top-right"
-                                        autoClose={5000}
-                                        hideProgressBar={false}
-                                        newestOnTop={false}
-                                        closeOnClick={false}
-                                        rtl={false}
-                                        pauseOnFocusLoss
-                                        draggable
-                                        pauseOnHover
-                                        theme="light"
-                                        transition={Flip}
-                                    />
-
-                                </div>
-
+                            error.length > 0 && <h1>{error}</h1>
                         }
                     </div>
 

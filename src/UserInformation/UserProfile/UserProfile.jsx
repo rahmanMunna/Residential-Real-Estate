@@ -16,7 +16,7 @@ const UserProfile = () => {
       <div className='lg:w-1/2 mx-auto text-white flex flex-col items-center border pt-4 border-green-500 '>
         <div>
           {
-            photoURL? <img className='text-7xl rounded-xl' src={photoURL} alt="" />:<FaUser className='text-7xl '></FaUser>
+            photoURL? <img className='text-7xl w-44 h-50 shadow-lg shadow-red-800' src={photoURL} alt="" />:<FaUser className='text-7xl '></FaUser>
           }
         </div>
         <div className=' lg:p-10 lg:mx-auto p-4 rounded-lg w-full'>

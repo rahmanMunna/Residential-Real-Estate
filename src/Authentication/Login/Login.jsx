@@ -5,8 +5,9 @@ import { FaEye } from "react-icons/fa6";
 import { FaEyeLowVision } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa6";
-// import { Bounce, Flip, toast, ToastContainer } from 'react-toastify';
-// import "react-toastify/dist/ReactToastify.css";
+import { Bounce, Flip, ToastContainer, toast } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css";
+
 
 const Login = () => {
 
@@ -20,13 +21,33 @@ const Login = () => {
 
     const { signIn, signInWithGoogle } = useContext(AuthContext)
 
+    const notifySuccess = () => {
+        toast.success('SignIn Successful', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+
+        setTimeout(navigateToDestination, 2000)
+    }
+
+    function navigateToDestination() {
+        navigate(location?.state ? location.state : '/')
+    }
+
 
     function login(email, password) {
         signIn(email, password)
             .then(result => {
                 setError('')
                 setSuccess(true)
-                alert('Login Successful')
+                giveToast();
                 console.log(result.user)
             })
             .catch(error => {
@@ -38,7 +59,8 @@ const Login = () => {
     function handleSingInWithGoogle() {
         signInWithGoogle()
             .then(result => {
-                navigate('/')
+                setSuccess(true)
+                giveToast();
                 console.log(result.user)
             })
             .catch(error => {
@@ -54,9 +76,31 @@ const Login = () => {
 
     }
 
-    useEffect(() => {
-        success && navigate(location?.state ? location.state : '/')
-    }, [success])
+    function giveToast(){
+        if (success) {
+            notifySuccess();
+            {
+                <ToastContainer
+                    position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick={false}
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                    transition={Flip}
+                />
+            }
+
+        }
+    }
+
+    // useEffect(() => {
+    //     success && navigate(location?.state ? location.state : '/')
+    // }, [success])
 
 
     return (
