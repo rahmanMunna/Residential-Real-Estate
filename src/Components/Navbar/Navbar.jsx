@@ -39,7 +39,7 @@ const Navbar = () => {
                 alert(error.message)
             })
     }
-    console.log(user)
+    // console.log(user)
 
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>

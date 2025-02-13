@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Estate = ({ estate }) => {
 
     const { id,estate_title, price, status, area, location, facilities, image } = estate;
-    console.log(image)
+    // console.log(image)
 
     return (
         <div className="card  border bg-black text-white transition-transform duration-300 hover:scale-110">
@@ -46,9 +46,9 @@ const Estate = ({ estate }) => {
                 </div>
                 <div className="flex items-center gap-2 flex-wrap">
                     {
-                        facilities.map(facility =>
+                        facilities.map((facility) =>
                             <>
-                                <div className="flex items-center border p-2 rounded-xl">
+                                <div key={facility.id} className="flex items-center border p-2 rounded-xl">
                                     <FaHashtag></FaHashtag><h1 className="text-purple-800 lg:text-xl font-semibold">{facility}</h1>
                                 </div>
                             </>)
